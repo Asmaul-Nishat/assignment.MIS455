@@ -24,11 +24,10 @@ function searchCountry() {
                         <p class="card-text"><strong>Capital:</strong> ${country.capital || 'N/A'}</p>
                         <p class="card-text"><strong>Population:</strong> ${country.population.toLocaleString()}</p>
                         <p class="card-text"><strong>Area:</strong> ${country.area.toLocaleString()} km²</p>
+                        <p class="card-text"><strong>Region:</strong> ${country.region || 'N/A'}</p>
                         <p class="card-text"><strong>Currency:</strong> ${Object.values(country.currencies || {}).map(c => c.name).join(', ') || 'N/A'}</p>
                         <p class="card-text"><strong>Languages:</strong> ${Object.values(country.languages || {}).join(', ') || 'N/A'}</p>
                         <p class="card-text"><strong>Calling Code:</strong> +${country.idd.root || ''}${(country.idd.suffixes || []).join(', ') || ''}</p>
-                        <p class="card-text"><strong>GDP:</strong> GDP information not available in the current API.</p>
-                        <p class="card-text"><strong>Ethnic Groups:</strong> Ethnic information not available in the current API.</p>
                         <button class="btn btn-primary" onclick="showWeather('${country.name.common}', ${country.latlng[0]}, ${country.latlng[1]})">More Details</button>
                     </div>
                 `;
