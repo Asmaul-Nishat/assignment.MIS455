@@ -78,15 +78,15 @@ body {
 
 /* Set carousel to occupy 80% of the viewport height */
 #mainCarousel {
-    height: 85vh; /* 80% of the viewport height */
-    max-height: 80vh;
+    height: 90vh; /* 80% of the viewport height */
+    max-height: 90vh;
     display:flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     position:relative;
    
-    padding-left: 10%; /* Add padding to the left */
-    padding-right: 10%; /* Add padding to the right */
+    padding-left: 12%; /* Add padding to the left */
+    padding-right: 12%; /* Add padding to the right */
     margin: 0 auto; /* Center the entire carousel container */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
     border-radius: 15px; /* Rounding the edges of the carousel */
