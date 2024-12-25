@@ -78,12 +78,12 @@ body {
 
 /* Set carousel to occupy 80% of the viewport height */
 #mainCarousel {
-    height: 100vh; /* 80% of the viewport height */
-    max-height: 90vh;
-    display: flex; /* Use flexbox for centering */
+    height: 85vh; /* 80% of the viewport height */
+    max-height: 80vh;
+    display:flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    position:fixed;
+    position:relative;
    
     padding-left: 10%; /* Add padding to the left */
     padding-right: 10%; /* Add padding to the right */
@@ -95,7 +95,7 @@ body {
 
 /* Ensure images fit fully inside the carousel with rounded corners */
 #mainCarousel .carousel-item img {
-    height: 100%; /* Use full height of the carousel */
+    height: 80%; /* Use full height of the carousel */
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Prevents cropping */
     object-position: center; /* Ensures the image is centered */
@@ -355,3 +355,20 @@ button.btn:hover {
     color: #333; /* Darker text for visibility */
     padding: 10px 0; /* Padding around the text */
 }
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Centers the text inside the footer */
+    padding: 15px 0; /* Vertical padding for the footer */
+    margin-top: 20px; /* Adds a margin on top of the footer */
+    position:absolute; /* Keeps the footer positioned at the bottom if there's enough content */
+    width: 100%; /* Ensures it takes the full width of the page */
+}
+
+/* Optional: Add some extra styling for the footer text */
+footer p {
+    margin: 0; /* Removes default margin */
+    font-size: 14px; /* Adjust font size for the footer text */
+}
+
