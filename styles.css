@@ -1,0 +1,357 @@
+/* Custom CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Grid for Country Cards */
+#countryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Custom class selector */
+.card-custom {
+    border: 2px solid #bbcadb;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+}
+
+/* Custom ID selector */
+#weatherDetails {
+    background-color: #f8f9fa;
+}
+/* Styling the offcanvas container */
+#weatherDetails {
+    background-color: #f8f9fa; /* Light background color */
+    border: 2px solid #0d19256c; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+}
+
+/* Styling the header inside offcanvas */
+#weatherDetails .offcanvas-header {
+    background-color: #090909; /* Blue background for header */
+    color: #ffffff; /* White text */
+    border-bottom: 4px solid #f1f1e8; /* Darker blue border */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+/* Styling the body inside offcanvas */
+#weatherDetails .offcanvas-body {
+    font-family: 'Arial', sans-serif; /* Custom font */
+    color: #0f0101; /* Dark text color */
+    line-height: 1.6; /* Better line spacing */
+}
+
+/* Styling the close button */
+#weatherDetails .btn-close {
+    background-color: #f6e6e6; /* Blue background */
+    border-radius: 50%; /* Circular button */
+}
+/* Custom CSS for Carousel */
+.carousel {
+    border-radius: 15px; /* Rounds the edges of the carousel */
+    overflow: hidden; /* Ensures child elements stay within the rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+.carousel-inner img {
+    animation: fadeIn 1.5s ease-in-out; /* Fades in the images */
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds text shadow for better readability */
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+/* Set carousel to occupy 80% of the viewport height */
+#mainCarousel {
+    height: 100vh; /* 80% of the viewport height */
+    max-height: 90vh;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position:fixed;
+   
+    padding-left: 10%; /* Add padding to the left */
+    padding-right: 10%; /* Add padding to the right */
+    margin: 0 auto; /* Center the entire carousel container */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border-radius: 15px; /* Rounding the edges of the carousel */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Ensure images fit fully inside the carousel with rounded corners */
+#mainCarousel .carousel-item img {
+    height: 100%; /* Use full height of the carousel */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevents cropping */
+    object-position: center; /* Ensures the image is centered */
+    border-radius: 15px; /* Matches carousel rounding */
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+}
+
+/* Animate carousel captions */
+.carousel-caption {
+    animation: slideUp 1s ease-in-out; /* Add slide-up animation */
+}
+
+/* Add animation to carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Makes icons visible on dark images */
+    animation: bounce 1s infinite; /* Adds a subtle bounce animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1); /* Slightly zoomed in */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Normal size */
+    }
+}
+
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 90% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-5px); /* Moves icon slightly up */
+    }
+}
+
+/* Compact Navbar */
+.navbar {
+    padding: 8px 16px;  /* Reduced padding */
+}
+
+.navbar .navbar-brand {
+    font-size: 18px; /* Smaller brand text */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px;  /* Smaller font size for the links */
+    padding: 8px 12px; /* Reduced padding around the links */
+}
+
+.navbar-toggler-icon {
+    width: 25px;  /* Smaller hamburger icon */
+    height: 2px;  /* Thinner lines for the icon */
+}
+
+.navbar-toggler {
+    border: none;  /* Remove border around the hamburger icon */
+}
+
+/* On mobile screens, adjust navbar padding and font size */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 6px 12px; /* Even more compact for small screens */
+    }
+
+    .navbar .navbar-brand {
+        font-size: 16px;  /* Smaller font size on mobile */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 4px;  /* Further reduce font size on mobile */
+    }
+}
+
+
+.navbar {
+    background-color: #48698b; /* Dark background */
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #eef5f6; /* White */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #49bbcc; /* Hover color */
+}
+
+/* Search Section */
+.container {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.input-group {
+    border-radius: 20px;
+    text-align:left ;
+}
+
+#countryInput {
+    border-radius: 25px 0 0 25px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button.btn {
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #060c13;
+    color: white;
+}
+
+button.btn:hover {
+    background-color: #999e0a;
+}
+
+/* Country Grid Background */
+#countryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    background-color: #fcfcfc; /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Individual Country Card */
+.card-custom {
+    border: 2px solid #3a3e4347;
+    background-color: #d8dcddf2; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-custom:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Card Title and Text */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #060606; /* Dark text for title */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #040404; /* Lighter text for details */
+}
+
+/* OffCanvas Styling */
+#weatherDetails {
+    background-color: #f5f7f9;
+    border: 2px solid #0d19256c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    max-width: 90%;
+}
+
+/* OffCanvas Header */
+#weatherDetails .offcanvas-header {
+    background-color: #090909;
+    color: #6d4949;
+    border-bottom: 4px solid #c0c0bc;
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
+}
+
+/* OffCanvas Styling */
+#weatherDetails {
+    background-color: #d6d6d6; /* Light background for the offcanvas */
+    border: 2px solid #000000f9; /* Border color */
+    border-radius: 10px; 
+    color: #000000;/* Rounded corners */
+    padding: 20px; /* Inner padding */
+    width: 300px; /* Set width for the offcanvas */
+    max-width: 90%; /* Max width for responsiveness */
+}
+
+/* OffCanvas Header Styling */
+#weatherDetails .offcanvas-header {
+    background-color: #090909; /* Dark background for header */
+    color: #ffffff; /* White text */
+    border-bottom: 4px solid #f1f1e8; /* Border between header and body */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    padding: 15px; /* Padding inside the header */
+}
+
+/* OffCanvas Styling */
+#weatherDetails {
+    background-color: #aeb5bdd6; /* Light background for the offcanvas */
+    border: 2px solid #0e17216c; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px; /* Inner padding */
+    width: 350px; /* Set width for the offcanvas */
+    max-width: 80%; /* Max width for responsiveness */
+}
+
+/* OffCanvas Header Styling */
+#weatherDetails .offcanvas-header {
+    background-color: #000000; /* Dark background for header */
+    color: #fcfcfcec; /* White text */
+    border-bottom: 4px solid #f1f1f1; /* Border between header and body */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    padding: 15px; /* Padding inside the header */
+}
+
+/* OffCanvas Body Styling */
+#weatherDetails .offcanvas-body {
+    font-family: 'Arial', sans-serif; /* Custom font */
+    color: #090909; /* Dark text color */
+    line-height: 1.6; /* Line height for better readability */
+    padding: 15px; /* Padding inside the body */
+}
+
+/* Close Button Styling */
+#weatherDetails .btn-close {
+    background-color: #f7f7f7; /* Light color for the close button */
+    border-radius: 50%; /* Circular button */
+    padding: 8px 10px; /* Padding inside the button */
+}
+
+/* Close Button Hover Effect */
+#weatherDetails .btn-close:hover {
+    background-color: #110f0f; /* Darker shade when hovering */
+}
+
+/* Weather Data Styling */
+#weatherData {
+    font-size: 1.2rem; /* Larger font for the weather info */
+    color: #333; /* Darker text for visibility */
+    padding: 10px 0; /* Padding around the text */
+}
